@@ -1,0 +1,15 @@
+<addons>
+<addon id="plugin.video.toya" name="TOYA GO 2026" version="1.0.1" provider-name="lg">
+    <requires>
+        <import addon="script.module.requests" />
+        <import addon="script.module.inputstreamhelper" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <description lang="pl">TOYA GO 2026</description>
+        <summary lang="en">TOYA GO 2026</summary>
+    </extension>
+</addon>
+</addons>
