@@ -11,5 +11,12 @@
             <datadir zip="true">https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/repo/zips/</datadir>
         </dir>
     </extension>
-
+    <extension point="xbmc.addon.metadata">
+       <summary>Agaton 111 Repo</summary>
+       <description>Prywatne repozytorium </description>
+       <platform>all</platform>
+       <assets>
+              <icon>icon.png</icon>
+       </assets>
+    </extension>
 </addon>
