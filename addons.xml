@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.toya" name="TOYA GO 2026" version="1.0.1" provider-name="lg">
+
+<!-- REPO -->
+<addon id="repository.Agaton111"
+       name="Agaton Repo"
+       version="1.0.0"
+       provider-name="Agaton111">
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info compressed="false">
+                https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/addons.xml
+            </info>
+            <checksum>
+                https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/addons.xml.md5
+            </checksum>
+            <datadir zip="true">
+                https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/repo/zips/
+            </datadir>
+        </dir>
+    </extension>
+</addon>
+
+<!-- TWÓJ ADDON -->
+<addon id="plugin.video.toya"
+       name="TOYA GO 2026"
+       version="1.0.1"
+       provider-name="lg">
     <requires>
-        <import addon="script.module.requests" />
-	<import addon="script.module.inputstreamhelper" />
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+        <import addon="script.module.inputstreamhelper"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>video</provides>
     </extension>
- 	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO 2026</description>
-        <disclaimer lang="pl">TOYA GO 2026
-        </disclaimer>
-        <summary lang="en">TOYA GO 2026</summary>
-        <description lang="en">TOYA GO 2026</description>
-        <disclaimer lang="en">TOYA GO 2026
-        </disclaimer>
-        <language>pl</language>
+    <extension point="xbmc.addon.metadata">
+        <summary>TOYA GO 2026</summary>
+        <description>TOYA GO 2026</description>
         <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website></website>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
     </extension>
-</addon>>
+</addon>
 
 </addons>
