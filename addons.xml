@@ -6,6 +6,8 @@
          provider-name="lg">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
+      <import addon="script.module.requests" />
+      <import addon="script.module.inputstreamhelper" />	  
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
       <provides>video</provides>
@@ -14,6 +16,9 @@
       <summary>TOYA GO 2026</summary>
       <description>TOYA GO 2026</description>
       <platform>all</platform>
+      <assets>
+          <icon>icon.png</icon>
+      </assets>	  
     </extension>
   </addon>
 </addons>
