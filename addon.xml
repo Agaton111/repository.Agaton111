@@ -6,7 +6,7 @@
 
     <extension point="xbmc.addon.repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/addons.xml</info>
+            <info>https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/Agaton111/repository.Agaton111/main/repo/zips/</datadir>
         </dir>
