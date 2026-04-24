@@ -14,7 +14,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Narzędzia</summary>
-        <description>Narzędzie instalacyjne (Zależności/modułów), gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
+        <description>Narzędzie do instalacji przerobionych zależności/modułów. Gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
@@ -96,7 +96,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.1" provider-name="lg ag">
+<addon id="plugin.video.toyaAG" name="TOYA GO 2026" version="0.0.1" provider-name="lg ag">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" />
@@ -106,8 +106,12 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO AG</description>
-        <disclaimer lang="pl">TOYA GO AG
+        <description lang="pl">TOYA GO 2026</description>
+        <disclaimer lang="pl">TOYA GO 2026
+        </disclaimer>
+        <summary lang="en">TOYA GO 2026</summary>
+        <description lang="en">TOYA GO 2026</description>
+        <disclaimer lang="en">TOYA GO 2026
         </disclaimer>
         <language>pl</language>
         <platform>all</platform>
@@ -131,7 +135,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Demo EPG</summary>
-    <description lang="en">Pobiera opis filmu.</description>
+    <description lang="en">Pobiera opis do filmu. Integruje się z innymi wtyczkami, przez menu kontekstowe. Może pracować też samodzielnie.</description>
       <assets>
         <icon>icon.png</icon>
     </assets>
@@ -158,7 +162,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Demo EPG</summary>
-    <description lang="en">Pobiera TV EPG.</description>
+    <description lang="en">Pobiera EPG dla TV. Integruje się z innymi wtyczkami, przez menu kontekstowe. Może pracować też samodzielnie..</description>
       <assets>
         <icon>icon.png</icon>
     </assets>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.1" provider-name="lg ag">
+<addon id="plugin.video.toyaAG" name="TOYA GO 2026" version="0.0.1" provider-name="lg ag">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" />
@@ -9,8 +9,12 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO AG</description>
-        <disclaimer lang="pl">TOYA GO AG
+        <description lang="pl">TOYA GO 2026</description>
+        <disclaimer lang="pl">TOYA GO 2026
+        </disclaimer>
+        <summary lang="en">TOYA GO 2026</summary>
+        <description lang="en">TOYA GO 2026</description>
+        <disclaimer lang="en">TOYA GO 2026
         </disclaimer>
         <language>pl</language>
         <platform>all</platform>

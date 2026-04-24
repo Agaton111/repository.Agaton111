@@ -10,7 +10,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Demo EPG</summary>
-    <description lang="en">Pobiera opis filmu.</description>
+    <description lang="en">Pobiera opis do filmu. Integruje się z innymi wtyczkami, przez menu kontekstowe. Może pracować też samodzielnie.</description>
       <assets>
         <icon>icon.png</icon>
     </assets>		
