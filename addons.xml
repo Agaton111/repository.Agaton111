@@ -8,6 +8,7 @@
 
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>		
     </requires>
 
     <extension point="xbmc.python.script" library="addon.py" />
@@ -16,6 +17,9 @@
         <summary>Narzędzia</summary>
         <description>Proste narzędzia instalacyjne</description>
         <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>	  		
     </extension>
 
 </addon>
