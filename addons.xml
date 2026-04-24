@@ -10,9 +10,7 @@
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
 
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>executable</provides>
-    </extension>
+    <extension point="xbmc.python.script" library="addon.py" />
 
     <extension point="xbmc.addon.metadata">
         <summary>Narzędzia</summary>
