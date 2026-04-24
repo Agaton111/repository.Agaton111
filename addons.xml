@@ -45,6 +45,28 @@
 		</assets>    
   </extension>
 </addon>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.f4mTester" version="4.2.5" name="f4mTester" provider-name="Joel">
+  <requires>
+    <import addon="script.module.flask" version="0.12"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.netunblock"/>    	
+    <import addon="xbmc.json" version="6.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+  </extension>  
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">f4mTester</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+		</assets>    
+  </extension>
+</addon>
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.polskatv"
        name="Polska TV (darmowa)"
@@ -126,55 +148,5 @@
         </item>
     </extension>
       
-</addon>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tvprogram19" name="tvprogram19" version="0.0.2" provider-name="Agaton">
-  <requires>
-     <import addon="xbmc.python" version="3.0.0"/>
-     <import addon="script.module.requests" />   
-     <import addon="script.module.pyxbmct"/>
-    
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Demo TV EPG</summary>
-    <description lang="en">Pobiera program TV.</description>
-      <assets>
-        <icon>icon.png</icon>
-    </assets>	
-  </extension>
-      <extension point="kodi.context.item" library="default.py">
-        <item>
-            <label>[COLOR cyan][B]Info TV program[/B][/COLOR]</label>
-            <visible>True</visible>
-        </item>
-
-    </extension>
-      
-</addon>
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.f4mTester" version="4.4.26" name="f4mTester" provider-name="Joel">
-  <requires>
-    <import addon="script.module.flask" version="0.12"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.netunblock"/>    	
-    <import addon="xbmc.json" version="6.0.0"/>
-    <import addon="xbmc.python" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="service.py" start="startup"/>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-      <provides>video</provides>
-  </extension>  
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">f4mTester</summary>
-    <description lang="en"></description>
-    <platform>all</platform>
-    <assets>
-			<icon>icon.png</icon>
-		</assets>    
-  </extension>
 </addon>
 </addons>
