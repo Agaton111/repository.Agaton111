@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.f4mTester" version="a.g" name="f4mTester" provider-name="Joel">
+<addon id="plugin.video.f4mTester" version="4.4.26" name="f4mTester" provider-name="Joel">
   <requires>
     <import addon="script.module.flask" version="0.12"/>
     <import addon="script.module.requests"/>
