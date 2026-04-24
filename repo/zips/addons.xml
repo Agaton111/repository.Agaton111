@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.tools"
+       name="Tools"
+       version="1.0.0"
+       provider-name="Agaton">
+
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+
+    <extension point="xbmc.python.script" library="addon.py" />
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Narzędzia</summary>
+        <description>Narzędzie instalacyjne (Zależności/modułów), gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+
+</addon>
+
+<addon id="plugin.video.f4mTester" version="4.2.5" name="f4mTester" provider-name="Joel">
+  <requires>
+    <import addon="script.module.flask" version="0.12"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.netunblock"/>
+    <import addon="xbmc.json" version="6.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">f4mTester</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.f4mTesterAG" version="0.0.1" name="f4mTesterAG" provider-name="Joel AG">
+  <requires>
+    <import addon="script.module.flask" version="0.12"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.netunblock"/>
+    <import addon="xbmc.json" version="6.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">f4mTester</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+		</assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.polskatv"
+       name="Polska TV (darmowa)"
+       version="1.0.0"
+       provider-name="Agat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="inputstream.adaptive" version="20.3.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.0.0"/>
+        <import addon="script.module.requests" version="2.0.0"/>
+        <import addon="script.module.yt_dlp" version="2023.11.16"/>
+        <import addon="script.module.inputstreamhelper" version="0.8.2"/>
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Polska TV agaton </summary>
+        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.</description>
+        <language>pl</language>
+        <platform>all</platform>
+	  <assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	  </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.toya" name="TOYA GO 2026" version="1.0.1" provider-name="lg">
+<requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.inputstreamhelper" />
+</requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+ 	<extension point="xbmc.addon.metadata">
+        <description lang="pl">TOYA GO 2026</description>
+        <disclaimer lang="pl">TOYA GO 2026
+        </disclaimer>
+        <summary lang="en">TOYA GO 2026</summary>
+        <description lang="en">TOYA GO 2026</description>
+        <disclaimer lang="en">TOYA GO 2026
+        </disclaimer>
+        <language>pl</language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website></website>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="repository.Agaton111"
+       name="Agaton Repo"
+       version="1.0.0"
+       provider-name="Agaton111">
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info compressed="false">
+                https://agaton111.github.io/repository.Agaton111/addons.xml
+            </info>
+            <checksum>
+                https://agaton111.github.io/repository.Agaton111/addons.xml.md5
+            </checksum>
+            <datadir zip="true">
+                https://agaton111.github.io/repository.Agaton111/repo/zips/
+            </datadir>
+        </dir>
+    </extension>
+</addon>
+
+<addon id="script.epgagaton19" name="epgagaton" version="0.0.1" provider-name="Agaton">
+  <requires>
+     <import addon="script.module.pyxbmct" />
+     <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Demo EPG</summary>
+    <description lang="en">Pobiera opis filmu.</description>
+      <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+      <extension point="kodi.context.item" library="default.py">
+        <item>
+            <label>[COLOR gold][B]Info 2 o filmie[/B][/COLOR]</label>
+            <visible>True</visible>
+        </item>
+    </extension>
+
+</addon>
+
+<addon id="script.tvprogram19" name="tvprogram19" version="0.0.2" provider-name="Agaton">
+  <requires>
+     <import addon="xbmc.python" version="3.0.0"/>
+     <import addon="script.module.requests" />
+     <import addon="script.module.pyxbmct"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Demo EPG</summary>
+    <description lang="en">Pobiera TV EPG.</description>
+      <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+      <extension point="kodi.context.item" library="default.py">
+        <item>
+            <label>[COLOR cyan][B]Info TV program[/B][/COLOR]</label>
+            <visible>True</visible>
+        </item>
+    </extension>
+
+</addon>
+</addons>
