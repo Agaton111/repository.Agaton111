@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.epgagaton19" name="epgagaton" version="0.0.1" provider-name="Agaton">
+  <requires>
+     <import addon="script.module.pyxbmct" />
+     <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Demo EPG</summary>
+    <description lang="en">Pobiera opis do filmu. Integruje się z innymi wtyczkami, przez menu kontekstowe. Może pracować też samodzielnie.</description>
+      <assets>
+        <icon>icon.png</icon>
+    </assets>		
+  </extension>
+      <extension point="kodi.context.item" library="default.py">
+        <item>
+            <label>[COLOR gold][B]Info 2 o filmie[/B][/COLOR]</label>
+            <visible>True</visible>
+        </item>
+    </extension>
+      
+</addon>
+
