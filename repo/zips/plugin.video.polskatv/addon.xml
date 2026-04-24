@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.polskatv"
+       name="Polska TV (darmowa)"
+       version="1.0.0"
+       provider-name="Agat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="inputstream.adaptive" version="20.3.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.0.0"/>
+        <import addon="script.module.requests" version="2.0.0"/>
+        <import addon="script.module.yt_dlp" version="2023.11.16"/>
+        <import addon="script.module.inputstreamhelper" version="0.8.2"/>		
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Polska TV agaton </summary>
+        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.</description>
+        <language>pl</language>
+        <platform>all</platform>
+	  <assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	  </assets>		
+    </extension>
+</addon>

@@ -13,7 +13,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Narzędzia</summary>
-        <description>Proste narzędzia instalacyjne</description>
+        <description>Narzędzie instalacyjne (Zależności/modułów), gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>

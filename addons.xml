@@ -15,13 +15,64 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Narzędzia</summary>
-        <description>Proste narzędzia instalacyjne</description>
+        <description>Narzędzie instalacyjne (Zależności/modułów), gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
         </assets>	  		
     </extension>
 
+</addon>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.f4mTester" version="4.2.5" name="f4mTester" provider-name="Joel">
+  <requires>
+    <import addon="script.module.flask" version="0.12"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.netunblock"/>    	
+    <import addon="xbmc.json" version="6.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+  </extension>  
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">f4mTester</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+		</assets>    
+  </extension>
+</addon>
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.polskatv"
+       name="Polska TV (darmowa)"
+       version="1.0.0"
+       provider-name="Agat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="inputstream.adaptive" version="20.3.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.0.0"/>
+        <import addon="script.module.requests" version="2.0.0"/>
+        <import addon="script.module.yt_dlp" version="2023.11.16"/>
+        <import addon="script.module.inputstreamhelper" version="0.8.2"/>		
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Polska TV agaton </summary>
+        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.</description>
+        <language>pl</language>
+        <platform>all</platform>
+	  <assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	  </assets>		
+    </extension>
 </addon>
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <addon id="plugin.video.toya" name="TOYA GO 2026" version="1.0.1" provider-name="lg">
