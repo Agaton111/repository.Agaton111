@@ -96,34 +96,6 @@
 	  </assets>		
     </extension>
 </addon>
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.1" provider-name="lg ag">
-<requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.module.requests" />
-    <import addon="script.module.inputstreamhelper" />
-</requires>
-    <extension point="xbmc.python.pluginsource" library="addon.py">
-        <provides>video</provides>
-    </extension>
- 	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO AG</description>
-        <disclaimer lang="pl">TOYA GO AG
-        </disclaimer>
-        <summary lang="en">TOYA GO AG</summary>
-        <description lang="en">TOYA GO AG</description>
-        <disclaimer lang="en">TOYA GO AG
-        </disclaimer>
-        <language>pl</language>
-        <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website></website>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
-    </extension>
-</addon>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.epgagaton19" name="epgagaton" version="0.0.1" provider-name="Agaton">
   <requires>
