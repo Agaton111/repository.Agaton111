@@ -249,18 +249,17 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary lang="en">Demo TV EPG</summary>
-    <description lang="en">Pobiera program TV.</description>
+    <summary lang="en">Demo EPG</summary>
+    <description lang="en">Pobiera TV EPG.</description>
       <assets>
         <icon>icon.png</icon>
-    </assets>	
+    </assets>		
   </extension>
       <extension point="kodi.context.item" library="default.py">
         <item>
             <label>[COLOR cyan][B]Info TV program[/B][/COLOR]</label>
             <visible>True</visible>
         </item>
-
     </extension>
       
 </addon>
