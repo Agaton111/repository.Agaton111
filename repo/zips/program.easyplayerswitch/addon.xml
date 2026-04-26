@@ -14,6 +14,8 @@
         <summary lang="it_IT">Cambia player facilmente scegliendo tra VLC, player personalizzato e player interno di Kodi.</summary>
         <description lang="en_GB">This addon allows you to switch between VLC, custom player, and Kodi's internal player with a simple menu.</description>
         <description lang="it_IT">Questo addon consente di cambiare player scegliendo VLC, player personalizzato e player interno di Kodi tramite un semplice menù.</description>
+        <description lang="it_IT">Questo addon consente di cambiare player scegliendo VLC, player personalizzato e player interno di Kodi tramite un semplice menù.</description>
+        <description lang="pl_PL">Dodatek ten pozwala na zmianę odtwarzacza poprzez wybór VLC.Wybór niestandardowego odtwarzacza i wewnętrznego odtwarzacza Kodi ,jest za pomocą prostego menu.</description>		
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>

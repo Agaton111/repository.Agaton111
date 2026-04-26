@@ -9,7 +9,7 @@
   <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.addon.metadata">
 	<summary>A Streamlined Utility Tool for Kodi</summary>
-	<description>No Bloatware, no Nonsense! Just Keep your Kodi sharp and clean with this utility tool... Now with a Custom Wizard.</description>
+	<description>Bez zbędnego oprogramowania! Utrzymuj Kodi w czystości dzięki temu narzędziu... Teraz z niestandardowym kreatorem.</description>
     <language></language>
     <platform>all</platform>
     <license>The MIT License</license>
