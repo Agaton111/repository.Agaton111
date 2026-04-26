@@ -12,7 +12,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Demo EPG</summary>
-    <description lang="en">Pobiera TV EPG.</description>
+    <description lang="en">Pobiera EPG dla TV.Integruje się z innymi wtyczkami, przez menu kontekstowe. Może pracować też samodzielnie.</description>
       <assets>
         <icon>icon.png</icon>
     </assets>		
