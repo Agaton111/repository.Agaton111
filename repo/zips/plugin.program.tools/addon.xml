@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.program.tools"
-       name="Tools"
+       name="Tools Instal"
        version="1.0.0"
        provider-name="Agaton">
 
@@ -12,8 +12,8 @@
     <extension point="xbmc.python.script" library="addon.py" />
 
     <extension point="xbmc.addon.metadata">
-        <summary>Narzędzia</summary>
-        <description>Narzędzie do instalacji przerobionych zależności/modułów. Gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
+        <summary>Instalator</summary>
+        <description>Narzędzie do instalacji przerobionych zależności/modułów/plików language.pl_pl. Gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>

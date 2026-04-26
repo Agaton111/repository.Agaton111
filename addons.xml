@@ -2,7 +2,7 @@
 <addons>
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.program.tools"
-       name="Tools"
+       name="Tools Instal"
        version="1.0.0"
        provider-name="Agaton">
 
@@ -14,8 +14,8 @@
     <extension point="xbmc.python.script" library="addon.py" />
 
     <extension point="xbmc.addon.metadata">
-        <summary>Narzędzia</summary>
-        <description>Narzędzie do instalacji przerobionych zależności/modułów. Gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
+        <summary>Instalator</summary>
+        <description>Narzędzie do instalacji przerobionych zależności/modułów/plików language.pl_pl. Gdy nieaktywne aktywuj i kliknij 'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
@@ -28,7 +28,7 @@
   <requires>
     <import addon="script.module.flask" version="0.12"/>
     <import addon="script.module.requests"/>
-    <import addon="script.module.netunblock"/>    	
+    <import addon="script.module.netunblock" version="0.0.2"/>    	
     <import addon="xbmc.json" version="6.0.0"/>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -50,7 +50,7 @@
   <requires>
     <import addon="script.module.flask" version="0.12"/>
     <import addon="script.module.requests"/>
-    <import addon="script.module.netunblock" version="0.0.2"/>   	   	
+    <import addon="script.module.netunblock" version="0.0.2"/>   	
     <import addon="xbmc.json" version="6.0.0"/>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -149,16 +149,20 @@
         </assets>
     </extension>
 </addon>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.checkurl" name="Check URL" version="1.0.0" provider-name="Kasio">
-  
-  <extension point="xbmc.python.script" library="default.py" />
-  
+
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+
+  <extension point="xbmc.python.script" library="default.py"/>
   <extension point="xbmc.addon.metadata">
     <summary>Zapisuje URL aktualnie odtwarzanego strumienia</summary>
-    <description>Dodatek Check URL (script.checkurl): zapisywanie adresu URL aktualnie odtwarzanego strumienia do pliku tekstowego kodi_url_Filmu.txt w folderze userdata "Linki URL - script.checkurl".</description>
+    <description>Dodatek zapisuje URL do pliku kodi_url_Filmu.txt</description>
     <platform>all</platform>
   </extension>
-  
+
 </addon>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.epgagaton19" name="epgagaton" version="0.0.1" provider-name="Agaton">
