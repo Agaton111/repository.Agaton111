@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="script.checkurl" name="Check URL" version="1.0.0" provider-name="Kasio">
+
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="pl">Zapisuje URL aktualnie odtwarzanego strumienia</summary>
+    <description lang="pl">Dodatek zapisuje URL do pliku kodi_url_Filmu.txt</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>    
+  </extension>
+
+</addon>
