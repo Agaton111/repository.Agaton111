@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.f4mTesterAG" version="0.0.1" name="f4mTesterAG" provider-name="Joel AG">
   <requires>
-    <import addon="xbmc.python" version="3.0.0"/> 
     <import addon="script.module.flask" />
     <import addon="script.module.requests"/>
     <import addon="script.module.netunblock" />   	
-    <import addon="xbmc.json" />
+    <import addon="xbmc.json" version="6.0.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.service" library="service.py" start="startup"/>
   <extension point="xbmc.python.pluginsource" library="default.py">
