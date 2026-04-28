@@ -14,9 +14,10 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">f4mTester</summary>
     <description lang="en"></description>
-    <platform>all</platform>
-    <assets>
-			<icon>icon.png</icon>
-		</assets>    
-  </extension>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>	  		
+    </extension>
+
 </addon>

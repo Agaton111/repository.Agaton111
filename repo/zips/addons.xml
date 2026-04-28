@@ -14,7 +14,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Instalator nietypowych modułów</summary>
-        <description>Narzędzie do instalacji zależności/modułów/plików language.pl_pl. Gdy nieaktywne aktywuj i kliknij -'Uruchom'</description>
+        <description>Narzędzie do pobierania róznych plików .Lub instalacji plików language.pl_pl. Gdy nieaktywne aktywuj i kliknij -'Uruchom'</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
@@ -60,11 +60,12 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="en">f4mTester</summary>
     <description lang="en"></description>
-    <platform>all</platform>
-    <assets>
-			<icon>icon.png</icon>
-		</assets>
-  </extension>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+
 </addon>
 
 <addon id="plugin.video.polskatv"
@@ -264,10 +265,11 @@
             yt-dlp to czysty Python i powinien działać w Kodi 20+ (Python 3.10+) i Kodi 21 (Python 3.11)..
         </description>
         <platform>all</platform>
-	  <assets>
-		<icon>icon.png</icon>
-	  </assets>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
     </extension>
+
 </addon>
 
 <addon id="script.tvprogram19" name="tvprogram19" version="0.0.2" provider-name="Agaton">

@@ -13,8 +13,9 @@
             yt-dlp to czysty Python i powinien działać w Kodi 20+ (Python 3.10+) i Kodi 21 (Python 3.11)..
         </description>
         <platform>all</platform>
-	  <assets>
-		<icon>icon.png</icon>
-	  </assets>		
+        <assets>
+            <icon>icon.png</icon>
+        </assets>	  		
     </extension>
+
 </addon>
