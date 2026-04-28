@@ -1,0 +1,20 @@
+<addon id="script.module.yt_dlp"
+       name="yt-dlp"
+       version="2025.10.02"
+       provider-name="manual-build">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>yt-dlp python library for Kodi addons</summary>
+        <description>
+            Ten szablon NIE zawiera żadnych plików .dll ani .exe.
+            yt-dlp to czysty Python i powinien działać w Kodi 20+ (Python 3.10+) i Kodi 21 (Python 3.11)..
+        </description>
+        <platform>all</platform>
+	  <assets>
+		<icon>icon.png</icon>
+	  </assets>		
+    </extension>
+</addon>
