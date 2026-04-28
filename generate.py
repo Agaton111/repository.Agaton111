@@ -2,12 +2,58 @@
 import os
 import zipfile
 import hashlib
+import xml.etree.ElementTree as ET
 
 REPO_DIR = "repo/zips"
 OUTPUT_XML = "addons.xml"
 OUTPUT_MD5 = "addons.xml.md5"
 
 addons = []
+errors = []
+
+def validate_addon(xml_text, source):
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as e:
+        errors.append(f"[XML ERROR] {source}: {e}")
+        return None
+
+    # sprawdź czy to <addon>
+    if root.tag != "addon":
+        errors.append(f"[INVALID ROOT] {source}: root != addon")
+        return None
+
+    addon_id = root.attrib.get("id")
+    version = root.attrib.get("version")
+
+    if not addon_id or not version:
+        errors.append(f"[MISSING ID/VERSION] {source}")
+        return None
+
+    # szukaj metadata
+    metadata = root.find("extension[@point='xbmc.addon.metadata']")
+    if metadata is not None:
+        langs = {}
+
+        for desc in metadata.findall("description"):
+            lang = desc.attrib.get("lang", "default")
+
+            # duplikaty języków
+            if lang in langs:
+                errors.append(
+                    f"[DUPLICATE DESCRIPTION] {addon_id} ({source}) lang={lang}"
+                )
+            else:
+                langs[lang] = True
+
+            # pusty description
+            if not (desc.text and desc.text.strip()):
+                errors.append(
+                    f"[EMPTY DESCRIPTION] {addon_id} ({source}) lang={lang}"
+                )
+
+    return xml_text.strip()
+
 
 for root, dirs, files in os.walk(REPO_DIR):
     dirs.sort()
@@ -21,16 +67,10 @@ for root, dirs, files in os.walk(REPO_DIR):
 
         try:
             with zipfile.ZipFile(zip_path, 'r') as z:
-                found = False
-
                 for name in z.namelist():
                     if name.endswith("addon.xml"):
-                        found = True
-
                         with z.open(name) as f:
                             raw = f.read()
-
-                            # usuwa BOM + bezpieczne dekodowanie
                             xml = raw.decode("utf-8-sig", errors="ignore")
 
                             # usuń nagłówki XML
@@ -39,22 +79,21 @@ for root, dirs, files in os.walk(REPO_DIR):
                                 line for line in lines
                                 if not line.strip().startswith("<?xml")
                             ]
-
-                            # usuń puste linie na początku i końcu
                             xml = "\n".join(lines).strip()
 
-                            if xml:
-                                addons.append(xml)
+                            valid_xml = validate_addon(xml, zip_path)
+
+                            if valid_xml:
+                                addons.append(valid_xml)
+                            else:
+                                errors.append(f"[SKIPPED] {zip_path}")
 
                         break
 
-                if not found:
-                    print(f"[WARN] Brak addon.xml w: {zip_path}")
-
         except zipfile.BadZipFile:
-            print(f"[ERROR] Uszkodzony ZIP: {zip_path}")
+            errors.append(f"[BAD ZIP] {zip_path}")
         except Exception as e:
-            print(f"[ERROR] {zip_path}: {e}")
+            errors.append(f"[ERROR] {zip_path}: {e}")
 
 # zapis addons.xml
 with open(OUTPUT_XML, "w", encoding="utf-8") as f:
@@ -66,11 +105,19 @@ with open(OUTPUT_XML, "w", encoding="utf-8") as f:
 
     f.write('</addons>\n')
 
-# generowanie MD5
+# MD5
 with open(OUTPUT_XML, "rb") as f:
     md5 = hashlib.md5(f.read()).hexdigest()
 
 with open(OUTPUT_MD5, "w", encoding="utf-8") as f:
     f.write(md5)
 
-print("✅ Gotowe: addons.xml + addons.xml.md5")
+# raport błędów
+print("\n=== WALIDACJA ===")
+if errors:
+    for err in errors:
+        print(err)
+else:
+    print("Brak błędów 👍")
+
+print("\n✅ Gotowe: addons.xml + addons.xml.md5")

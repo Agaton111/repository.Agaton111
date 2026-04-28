@@ -18,7 +18,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Polska TV agaton </summary>
-        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.Do poprawnego działania wymaga odrębnej wersji modułu yt_dlp. Moduł yt_dlp "poprawiony" jest umnie w moim repo/tools instal. </description>
+        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.Do poprawnego działania wymaga odrębnej wersji modułu yt_dlp. Moduł yt_dlp "poprawiony" jest w moim repo/tools instalator. </description>
         <language>pl</language>
         <platform>all</platform>
 	  <assets>
