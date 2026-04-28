@@ -45,9 +45,9 @@
 </addon>
 <addon id="plugin.video.f4mTesterAG" version="0.0.1" name="f4mTesterAG" provider-name="Joel AG">
   <requires>
-    <import addon="script.module.flask" />
+    <import addon="script.module.flask" version="0.12"/>
     <import addon="script.module.requests"/>
-    <import addon="script.module.netunblock" />   	
+    <import addon="script.module.netunblock" version="0.0.2"/>    	
     <import addon="xbmc.json" version="6.0.0"/>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -57,13 +57,12 @@
   </extension>  
   <extension point="xbmc.addon.metadata">
     <summary lang="en">f4mTester</summary>
-    <description lang="en">Test ag</description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>	  		
-    </extension>
-
+    <description lang="en">f4mTester</description>
+    <platform>all</platform>
+    <assets>
+			<icon>icon.png</icon>
+		</assets>    
+  </extension>
 </addon>
 <addon id="plugin.video.polskatv"
        name="Polska TV (darmowa)"
@@ -238,6 +237,24 @@
 - Improved ADVANCED SETTINGS(BUFFER SIZE) functionality
     </news>
   </extension>
+</addon>
+<addon id="script.module.yt_dlp"
+       name="yt-dlp"
+       version="2025.10.02"
+       provider-name="manual-build">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>yt-dlp python library for Kodi addons</summary>
+        <description>
+            Clean template for packaging yt-dlp as a Kodi addon module.
+            Copy the real yt_dlp/ source folder from GitHub releases
+            into lib/yt_dlp/ here.
+        </description>
+        <platform>all</platform>
+    </extension>
 </addon>
 <addon id="script.module.yt_dlp"
        name="yt-dlp"
