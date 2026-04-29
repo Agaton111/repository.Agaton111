@@ -94,7 +94,27 @@ for root, dirs, files in os.walk(REPO_DIR):
             errors.append(f"[BAD ZIP] {zip_path}")
         except Exception as e:
             errors.append(f"[ERROR] {zip_path}: {e}")
+# ========================
+# WYKRYWANIE DUPLIKATÓW ID (z plikami)
+# ========================
+id_map = {}
+duplicates = []
 
+for xml in addons:
+    try:
+        root = ET.fromstring(xml)
+        addon_id = root.attrib.get("id")
+
+        if addon_id in id_map:
+            duplicates.append((addon_id, id_map[addon_id]))
+        else:
+            id_map[addon_id] = "unknown source"
+
+    except:
+        continue
+
+for addon_id, source in duplicates:
+    errors.append(f"[DUPLICATE ADDON ID] {addon_id}")
 # zapis addons.xml
 with open(OUTPUT_XML, "w", encoding="utf-8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
