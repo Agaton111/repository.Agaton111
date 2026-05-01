@@ -1,0 +1,28 @@
+<addon id="plugin.video.youtube"
+       name="YouTube Przekierowanie (Fake)"
+       version="1.0.0"
+       provider-name="Agaton">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+        <import addon="script.module.inputstreamhelper" />
+        <import addon="script.module.yt_dlp" version="2025.10.02"/>	
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+ 	<extension point="xbmc.addon.metadata">
+        <description lang="pl">Udaje tylko wtyczkę YouTube. Taki mały zamiennik bez api key</description>
+        <disclaimer lang="pl">Przekierowanie
+
+        </disclaimer>
+        <language>pl</language>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website></website>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
