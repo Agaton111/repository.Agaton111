@@ -18,7 +18,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Polska TV agaton </summary>
-        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.Do poprawnego działania wymaga odrębnej wersji modułu yt_dlp. Moduł yt_dlp "poprawiony" jest w moim repo/tools instalator. </description>
+        <description>Dodatek testowy z darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.W przypadku problemów przy instalacji wymaga odrębnej wersji modułu 'yt_dlp'. Moduł 'yt_dlp' "poprawiony" jest w moim repo/tools instalator. Większość kanałów działa stabilnie. Wyjątek to wizja.cc, tam co chwila są zmiany. Dodałem też "Kanały z MAC", wpisujecie adres, mac i oglądacie. Jest EPG i kilka gadżetów. Zapraszam do testów. </description>
         <language>pl</language>
         <platform>all</platform>
 	  <assets>

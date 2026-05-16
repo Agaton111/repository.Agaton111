@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.1" provider-name="lg ag">
+<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.2" provider-name="lg ag">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" />
@@ -9,7 +9,7 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO AG</description>
+        <description lang="pl">Autorem wtyczki jest "mtr81". Ja dodałem parę ikon i kilka drobiazgów (w tym karaoke)</description>
         <disclaimer lang="pl">TOYA GO AG
         </disclaimer>
         <summary lang="en">TOYA GO AG</summary>

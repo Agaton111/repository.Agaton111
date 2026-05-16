@@ -47,7 +47,7 @@
 
 <addon id="plugin.video.f4mTesterAG" version="0.0.1" name="f4mTesterAG" provider-name="Joel AG">
   <requires>
-    <import addon="script.module.flask" version="0.12"/>
+    <import addon="script.module.flask" version="2.1.3"/>
     <import addon="script.module.requests"/>
     <import addon="script.module.netunblock" version="0.0.2"/>
     <import addon="xbmc.json" version="6.0.0"/>
@@ -86,7 +86,7 @@
 
     <extension point="xbmc.addon.metadata">
         <summary>Polska TV agaton </summary>
-        <description>Dodatek testowy z kilkoma darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.Do poprawnego działania wymaga odrębnej wersji modułu yt_dlp. Moduł yt_dlp "poprawiony" jest w moim repo/tools instalator. </description>
+        <description>Dodatek testowy z darmowymi kanałami i poprawionym odtwarzaniem HLS/MP4.W przypadku problemów przy instalacji wymaga odrębnej wersji modułu 'yt_dlp'. Moduł 'yt_dlp' "poprawiony" jest w moim repo/tools instalator. Większość kanałów działa stabilnie. Wyjątek to wizja.cc, tam co chwila są zmiany. Dodałem też "Kanały z MAC", wpisujecie adres, mac i oglądacie. Jest EPG i kilka gadżetów. Zapraszam do testów. </description>
         <language>pl</language>
         <platform>all</platform>
 	  <assets>
@@ -96,7 +96,35 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.1" provider-name="lg ag">
+<addon id="plugin.video.subtitletranslator"
+       name="Subtitle Translator"
+       version="1.0.0"
+       provider-name="Agaton111">
+
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+    </requires>
+
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>Tłumaczenie napisów</summary>
+        <description>Translator napisów SRT</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <website></website>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<addon id="plugin.video.toyaAG" name="TOYA GO AG" version="0.0.2" provider-name="lg ag">
 <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.requests" />
@@ -106,7 +134,7 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">TOYA GO AG</description>
+        <description lang="pl">Autorem wtyczki jest "mtr81". Ja dodałem parę ikon i kilka drobiazgów (w tym karaoke)</description>
         <disclaimer lang="pl">TOYA GO AG
         </disclaimer>
         <summary lang="en">TOYA GO AG</summary>
@@ -126,7 +154,7 @@
 
 <addon id="plugin.video.youtube"
        name="YouTube Przekierowanie (Fake)"
-       version="1.0.0"
+       version="9.9.9+test"
        provider-name="Agaton">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -138,7 +166,7 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">Udaje tylko wtyczkę YouTube. Taki mały zamiennik bez api key</description>
+        <description lang="pl">Udaje tylko wtyczkę YouTube. Potrafi jednak oszukać inne dodatki. Taki mały zamiennik bez api key. Można pobrać większość video na dysk. Pobiera napisy polskie (nawet te z tłumacza). Gdy są w timedtext, daje polskie. Inaczej daje angielskie lub brak napisów. Do tłumaczenia napisów trzeba zainstalować moją wtyczkę "plugin.video.subtitletranslator'.</description>
         <disclaimer lang="pl">Przekierowanie
 
         </disclaimer>
@@ -198,7 +226,7 @@
 
 </addon>
 
-<addon id="script.epgagaton19" name="epgagaton" version="0.0.1" provider-name="Agaton">
+<addon id="script.epgagaton19" name="epgagaton" version="0.0.2" provider-name="Agaton">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
 	<import addon="script.module.pyxbmct"/>
@@ -274,6 +302,21 @@
 - Improved ADVANCED SETTINGS(BUFFER SIZE) functionality
     </news>
   </extension>
+</addon>
+
+<addon id="script.module.flask"
+       name="Flask"
+       version="2.1.3"
+       provider-name="Joel">
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <summary>Flask module</summary>
+        <description>Flask module</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
 
 <addon id="script.module.yt_dlp"

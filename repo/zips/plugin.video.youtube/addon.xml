@@ -1,6 +1,6 @@
 <addon id="plugin.video.youtube"
        name="YouTube Przekierowanie (Fake)"
-       version="1.0.0"
+       version="9.9.9+test"
        provider-name="Agaton">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -12,7 +12,7 @@
         <provides>video</provides>
     </extension>
  	<extension point="xbmc.addon.metadata">
-        <description lang="pl">Udaje tylko wtyczkę YouTube. Taki mały zamiennik bez api key</description>
+        <description lang="pl">Udaje tylko wtyczkę YouTube. Potrafi jednak oszukać inne dodatki. Taki mały zamiennik bez api key. Można pobrać większość video na dysk. Pobiera napisy polskie (nawet te z tłumacza). Gdy są w timedtext, daje polskie. Inaczej daje angielskie lub brak napisów. Do tłumaczenia napisów trzeba zainstalować moją wtyczkę "plugin.video.subtitletranslator'.</description>
         <disclaimer lang="pl">Przekierowanie
 
         </disclaimer>
